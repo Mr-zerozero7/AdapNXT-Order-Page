@@ -1,15 +1,20 @@
-// import logo from './logo.svg';
+//  importing CSS styles
 import './App.css';
+
+//   importing React Packages
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+// importing Global textContext
+import {useTheme } from './ThemeContext';
+
+// importing elements from components
 import NavBar from './components/NavBar';
 import Dashboard from './components/Dashboard';
-// import Home from './components/Home'
 import Orders from './components/Orders'
 import Inventory from './components/Inventory';
 import Shipping from './components/Shipping';
 import Channel from './components/Channel';
 import DashboardPage from './components/DashboardPage';
-import {useTheme } from './ThemeContext';
+
 
 function App() {
   const {theme} = useTheme()
@@ -21,7 +26,6 @@ function App() {
         <div className="bottom-container">
           <Dashboard/>
           <div> 
-            {/* <Home /> */}
             <Routes>
               <Route exact path='/' element={<DashboardPage/>}/>
               <Route exact path='/orders' element={<Orders/>}/>

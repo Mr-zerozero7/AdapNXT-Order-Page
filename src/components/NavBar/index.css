@@ -1,4 +1,4 @@
-
+/* NavBar container and utility styles */
 .nav-bar-container{
     display: flex;
     flex-direction: row;
@@ -45,6 +45,3 @@
     background-color: white;
     color: black;
 }
-/* .user-image:hover{
-
-} */

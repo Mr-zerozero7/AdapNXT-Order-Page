@@ -1,16 +1,17 @@
-import { useState } from 'react'
 import './index.css'
+//   importing react icons
 import {LiaFileImportSolid} from 'react-icons/lia'
 import {AiOutlineSend, AiTwotonePrinter, AiOutlineDown} from 'react-icons/ai'
 import { RiRefreshLine, RiExpandUpDownLine, RiSearchLine} from 'react-icons/ri'
 import {CiSquarePlus} from 'react-icons/ci'
 import {GiShoppingBag} from 'react-icons/gi'
-
 import {RxCross2} from 'react-icons/rx'
 import {PiGearBold} from 'react-icons/pi'
-
+//  importing useState and useTheme (textContext) packages
+import { useState } from 'react'
 import { useTheme } from '../../ThemeContext';
 
+//  creating orders tabs array for listing
 const ordersTabs = [
     {name: "Pending", id: 1},
     {name: "Accepted", id: 2},
@@ -20,13 +21,21 @@ const ordersTabs = [
     {name: "Completed", id: 6},
     {name: "Cancelled", id: 7},
 ]
+//   creating orders no.of items 
 const orderItemsArray = [1,2,3] 
 
 const Orders = () => {
     const {theme} = useTheme()
     const [ordersTab, setOrdersTab] = useState(0)
+
+    //  creating orders banner section
+    //  creating orders container with tabs
+    //  creating orders header section
+    //  creating orders filter / header section
+    //  creating orders details list
     return(
         <>
+        {/* creating orders banner section */}
         <div className= {`home-container ${theme === 'darkmode' ? 'dark-mode' : 'light-mode-banner-box'}`}>
             <div className='output-container'>
                 <div className='tab-title-container'>
@@ -37,6 +46,7 @@ const Orders = () => {
                 
             </div>
         </div>
+        {/* creating orders container with tabs */}
         <div className='orders-container'>
             <div className='orders-tabs-container' >
                 {ordersTabs.map(eachTab => (
@@ -47,6 +57,7 @@ const Orders = () => {
                     onClick={() => setOrdersTab(eachTab.id)}>{eachTab.name}</button>
                 )) }
             </div>
+            {/* creating orders header section  */}
             <div className= {`pending-container ${theme === 'darkmode' ? 'dark-mode' : 'light-mode'}`}>
                 <div className='pending-tabs-container'>
                     <div className='pending-btns-container'>
@@ -56,6 +67,7 @@ const Orders = () => {
                     </div>
                     <button type='button' className='pending-tab-btn refresh-btn'><RiRefreshLine/> Refresh</button>
                 </div>
+                {/* creating orders filter / header section */}
                 <div className={`filter-container ${theme === 'darkmode' ? 'dark-mode' : 'light-mode'}`}>
                     <input type='checkbox' className='checkbox' />
                     <p className='filter-item'>Channel <RiExpandUpDownLine className='filter-item-icons'/></p>
@@ -67,6 +79,7 @@ const Orders = () => {
                     <p className='filter-item'>Status <RiExpandUpDownLine className='filter-item-icons'/></p>
                     <p className='filter-item'>Operation</p>
                 </div>
+                {/* creating orders details list */}
                 <ul className='orders-list-container'>
                     {orderItemsArray.map(eachOrder => (
                         <li className='orders-list-item' key={eachOrder}>

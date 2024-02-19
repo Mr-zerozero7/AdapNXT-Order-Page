@@ -1,17 +1,18 @@
 import './index.css'
 import logo from './logo.svg';
+//  importing react icons
 import {FaRegMoon, FaRegBell} from 'react-icons/fa'
 import {TbLanguageHiragana} from 'react-icons/tb'
 import {RxAvatar} from 'react-icons/rx'
+//  importing link and textContext
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 import { useTheme } from '../../ThemeContext';
 
 const NavBar = () =>{
-    // const [darkMode, setDarkMode] = useState(false)
     const {theme, toggleTheme} = useTheme()
 
 
+    // creating a brand logo/name and utility menu
     return(
         <>
         <div className={`nav-bar-container ${theme === 'darkmode' ? 'dark-mode' : 'light-mode'}`}>

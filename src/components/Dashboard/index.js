@@ -1,12 +1,13 @@
 import './index.css'
-import {AiOutlineDashboard} from 'react-icons/ai'
-import {IoPricetagOutline, IoShareSocialOutline} from 'react-icons/io5' // io5 IoShareSocialOutline
-import {BiNews} from 'react-icons/bi'
-import {MdOutlineLocalShipping} from 'react-icons/md'
+//  importing packages
 import { useState , useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { useTheme } from '../../ThemeContext';
-
+//  importing React icons
+import {AiOutlineDashboard} from 'react-icons/ai'
+import {IoPricetagOutline, IoShareSocialOutline} from 'react-icons/io5'
+import {BiNews} from 'react-icons/bi'
+import {MdOutlineLocalShipping} from 'react-icons/md'
 
 
 const Dashboard = () => {
@@ -17,6 +18,7 @@ const Dashboard = () => {
       setActiveTab(3);
     }, [])
     
+    //  creating dashboard tabs
     return(
         <div className= {`side-bar-container ${theme === 'darkmode' ? 'dark-mode' : 'light-mode'}`}>
             <div className='dashboard-container'>
