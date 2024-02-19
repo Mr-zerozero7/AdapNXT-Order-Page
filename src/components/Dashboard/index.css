@@ -1,0 +1,41 @@
+.side-bar-container{
+    margin-top: 8px;
+    /* margin-right: 8px; */
+    width: 200px;
+    height: 100vh;
+    background-color: white;
+}
+.dashboard-items{
+    list-style: none;
+    margin: 10px 10px 15px 0px;
+    padding: 15px;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: white;
+    text-align: left;
+}
+
+.active{
+    background-color: rgb(212, 235, 250);
+    border-right: 4px solid rgb(40, 176, 230);
+    color: black;
+}
+.dashboard-icons{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.dashboard-items:hover{
+    background-color: rgb(212, 235, 250);
+    cursor: pointer;
+}
+
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+.light-mode{
+    background-color: white;
+    color: black;
+}
